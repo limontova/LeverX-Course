@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\masha\\Desktop\\LeverX курс\\Task_1\\Task_1.csproj": {}
+    "D:\\LeverX курс\\Task_1\\Task_1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\masha\\Desktop\\LeverX курс\\Task_1\\Task_1.csproj": {
+    "D:\\LeverX курс\\Task_1\\Task_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\masha\\Desktop\\LeverX курс\\Task_1\\Task_1.csproj",
+        "projectUniqueName": "D:\\LeverX курс\\Task_1\\Task_1.csproj",
         "projectName": "Task_1",
-        "projectPath": "C:\\Users\\masha\\Desktop\\LeverX курс\\Task_1\\Task_1.csproj",
+        "projectPath": "D:\\LeverX курс\\Task_1\\Task_1.csproj",
         "packagesPath": "C:\\Users\\masha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\masha\\Desktop\\LeverX курс\\Task_1\\obj\\",
+        "outputPath": "D:\\LeverX курс\\Task_1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,41 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Task_1
 {
     class Program
     {
-        static int Sum(params int[] integers)
+        static BigInteger GetSumOfArithmeticProgression(BigInteger arithmeticDifference, BigInteger limit)
         {
-            int result = 0;
-            for(int i = 0; i < integers.Length; i++)
-            {
-                result += integers[i];
-            }
-            return result;
-        }
-
-        static int[] GetNumbersMultuplesOfThreeAndFive(int limit)
-        {
-            List<int> numbers = new List<int>();
-            int currentNumber = 3;
-            while(currentNumber < limit)
-            {
-                if (currentNumber % 3 == 0 || currentNumber % 5 == 0)
-                {
-                    numbers.Add(currentNumber);
-                }
-                currentNumber++;
-            }
-            return numbers.ToArray();
+            BigInteger numberOfElements = (limit - 1) / arithmeticDifference;
+            return arithmeticDifference * numberOfElements * (numberOfElements + 1) / 2;
         }
         static void Main(string[] args)
         {
-            int input = int.Parse(Console.ReadLine());
-            if (input <= 0)
+            BigInteger input = BigInteger.Parse(Console.ReadLine());
+            if (input <= 3)
                 Console.WriteLine("0");
             else
-                Console.WriteLine(Sum(GetNumbersMultuplesOfThreeAndFive(input)));
+            {
+                //--input;
+                Console.WriteLine(GetSumOfArithmeticProgression(3, input) + GetSumOfArithmeticProgression(5, input) - GetSumOfArithmeticProgression(15, input));
+            }
         }
     }
 }
