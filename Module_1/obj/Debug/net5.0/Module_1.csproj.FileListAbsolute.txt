@@ -1,0 +1,12 @@
+D:\LeverX курс\Module_1\bin\Debug\net5.0\Module_1.deps.json
+D:\LeverX курс\Module_1\bin\Debug\net5.0\Module_1.dll
+D:\LeverX курс\Module_1\bin\Debug\net5.0\ref\Module_1.dll
+D:\LeverX курс\Module_1\bin\Debug\net5.0\Module_1.pdb
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.csproj.AssemblyReference.cache
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.AssemblyInfoInputs.cache
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.AssemblyInfo.cs
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.csproj.CoreCompileInputs.cache
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.dll
+D:\LeverX курс\Module_1\obj\Debug\net5.0\ref\Module_1.dll
+D:\LeverX курс\Module_1\obj\Debug\net5.0\Module_1.pdb
