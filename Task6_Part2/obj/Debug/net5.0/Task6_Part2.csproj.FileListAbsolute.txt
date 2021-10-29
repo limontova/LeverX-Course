@@ -1,0 +1,12 @@
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.csproj.AssemblyReference.cache
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.GeneratedMSBuildEditorConfig.editorconfig
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.AssemblyInfoInputs.cache
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.AssemblyInfo.cs
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.csproj.CoreCompileInputs.cache
+D:\LeverX курс\Task6_Part2\bin\Debug\net5.0\Task6_Part2.deps.json
+D:\LeverX курс\Task6_Part2\bin\Debug\net5.0\Task6_Part2.dll
+D:\LeverX курс\Task6_Part2\bin\Debug\net5.0\ref\Task6_Part2.dll
+D:\LeverX курс\Task6_Part2\bin\Debug\net5.0\Task6_Part2.pdb
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.dll
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\ref\Task6_Part2.dll
+D:\LeverX курс\Task6_Part2\obj\Debug\net5.0\Task6_Part2.pdb
