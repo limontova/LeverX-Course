@@ -1,0 +1,12 @@
+D:\LeverX курс\BankSystem\bin\Debug\net5.0\BankSystem.deps.json
+D:\LeverX курс\BankSystem\bin\Debug\net5.0\BankSystem.dll
+D:\LeverX курс\BankSystem\bin\Debug\net5.0\ref\BankSystem.dll
+D:\LeverX курс\BankSystem\bin\Debug\net5.0\BankSystem.pdb
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.csproj.AssemblyReference.cache
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.AssemblyInfoInputs.cache
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.AssemblyInfo.cs
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.csproj.CoreCompileInputs.cache
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.dll
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\ref\BankSystem.dll
+D:\LeverX курс\BankSystem\obj\Debug\net5.0\BankSystem.pdb

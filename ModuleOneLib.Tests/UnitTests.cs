@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Module_1;
+using ModuleOneLib;
 using System.Numerics;
 using System.Collections.Generic;
 
@@ -19,7 +19,7 @@ namespace ModuleOneLib.Tests
             yield return new TestCaseData(3, (BigInteger)0);
             yield return new TestCaseData(30, (BigInteger)195);
         }
-
+        
         [Test, TestCaseSource("Task1Provider")]
         public void Task1_GetsValidNumber_ReturnsValidAnswer(int number, BigInteger expected)
         {

@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Module_1\ModuleOneLib.csproj" />
+    <ProjectReference Include="..\ModuleOneLib\ModuleOneLib.csproj" />
   </ItemGroup>
 
 </Project>
