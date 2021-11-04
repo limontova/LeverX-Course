@@ -34,10 +34,6 @@ namespace BankSystem
         public Client owner { get; }
         public decimal Deposit { get; set; }
         public decimal cardBalance { get; set; }
-        public void SetCardBalance(decimal balance)
-        {
-            cardBalance = balance;
-        }
         decimal InterestRate { get; }
         public void MakeWithdraw(decimal sum)
         {
@@ -67,15 +63,12 @@ namespace BankSystem
         {
             owner = new Client(name, lastName, patronymic, passportNumber);
         }
-        public void SetCardBalance(decimal balance)
-        {
-            cardBalance = balance;
-        }
         public decimal Withdraw { get; set; }
         public Client owner { get; }
-        public decimal Deposit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal cardBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        decimal IBankAccount.cardBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private decimal _deposit;
+        private decimal _cardBalance;
+        public decimal Deposit { get => _deposit; set => _deposit = value; }
+        public decimal cardBalance { get => _cardBalance; set =>_cardBalance = value; }
         public decimal InterestRate { get { return cardBalance / 1000; } }
     }
 
@@ -93,14 +86,13 @@ namespace BankSystem
         {
             owner = new Client(string.Empty, string.Empty, string.Empty, string.Empty);
         }
-        public void SetCardBalance(decimal balance)
-        {
-            cardBalance = balance;
-        }
         public decimal Withdraw { get; set; }
-        public Client owner { get; }
-        public decimal Deposit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal cardBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Client owner;
+        Client IBankAccount.owner => throw new NotImplementedException();
+        private decimal _deposit;
+        private decimal _cardBalance;
+        public decimal Deposit { get => _deposit; set => _deposit = value; }
+        public decimal cardBalance { get => _cardBalance; set => _cardBalance = value; }
         public decimal InterestRate { get { return cardBalance / 2000; } }
     }
     public class BankAccountForOrdinary : IBankAccount
@@ -117,22 +109,28 @@ namespace BankSystem
         {
             owner = new Client(string.Empty, string.Empty, string.Empty, string.Empty);
         }
-        public void SetCardBalance(decimal balance)
-        {
-            cardBalance = balance;
-        }
+        private decimal _deposit;
+        private decimal _cardBalance;
         public decimal Withdraw { get; set; }
         public Client owner;
-        public decimal Deposit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal cardBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public decimal Deposit { get => _deposit; set => _deposit = value; }
+        public decimal cardBalance { get => _cardBalance; set => _cardBalance = value; }
         public decimal InterestRate { get { return cardBalance / 3000; } }
         Client IBankAccount.owner => throw new NotImplementedException();
         public void MakeDeposit(decimal sum)
         {
-            if (sum <= 1000)
+            if(cardBalance <= sum)
             {
-                Withdraw -= sum;
-                cardBalance += sum;
+                Logger.Log("Rejected for insufficient balance");
+            }
+            else if (sum <= 1000)
+            {
+                Logger.Log("Rejected. Sum couldn't be less than 1000");
+            }
+            else
+            {
+                cardBalance -= sum;
+                Deposit += sum;
                 Logger.Log("Made deposit");
             }
         }
@@ -140,9 +138,14 @@ namespace BankSystem
 
     public class RequestForCreditCard
     {
-        public static bool IsApproved(IBankAccount account)
+        private IBankAccount bankAccount;
+        public RequestForCreditCard(IBankAccount bank)
         {
-            if (account.cardBalance < 2000)
+            bankAccount = bank;
+        }
+        public bool IsApproved()
+        {
+            if (bankAccount.cardBalance > 2000)
             {
                 Logger.Log("Approved for giving a credit card");
                 return true;
