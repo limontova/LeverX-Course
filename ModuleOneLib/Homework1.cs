@@ -6,7 +6,7 @@ namespace ModuleOneLib
 {
     public class Homework1
     {
-        static public BigInteger Task1(BigInteger number)
+        static public BigInteger MultiplesOfThreeOrFive(BigInteger number)
         {
             static BigInteger GetSumOfArithmeticProgression(BigInteger arithmeticDifference, BigInteger limit)
             {
@@ -21,7 +21,7 @@ namespace ModuleOneLib
                 return GetSumOfArithmeticProgression(3, number) + GetSumOfArithmeticProgression(5, number) - GetSumOfArithmeticProgression(15, number);
             }
         }
-        static public string Task2(string str)
+        static public string NumericalsOfString(string str)
         {
             Dictionary<char, int> arrayOfChars = new Dictionary<char, int>();
             string result = string.Empty;
@@ -41,7 +41,7 @@ namespace ModuleOneLib
             return result;
         }
 
-        static public List<T> Task3<T>(IEnumerable<T> sequence) where T : IEquatable<T>
+        static public List<T> UniqueInOrder<T>(IEnumerable<T> sequence) where T : IEquatable<T>
         {
             var result = new List<T>();
             sequence.GetEnumerator().Reset();
@@ -68,33 +68,21 @@ namespace ModuleOneLib
             return result;
         }
 
-        static public int Task4(string firstAddress, string secondAddress)
+        static public int CountIPAddress(string firstAddress, string secondAddress)
         {
-            static int[] TransformIntoArray(string str)
+            static int[] GetIntArrayFromString(string str)
             {
-                int[] array = new int[4];
-                int i = 0;
-                int currentNumber = 0;
-                foreach (var symbol in str)
+                List<int> array = new List<int>(4);
+                foreach(var digit in str.Split('.'))
                 {
-                    if (symbol != '.')
-                    {
-                        currentNumber = int.Parse(symbol.ToString()) + currentNumber * 10;
-                    }
-                    else
-                    {
-                        array[i] = currentNumber;
-                        i++;
-                        currentNumber = 0;
-                    }
+                    array.Add(int.Parse(digit));
                 }
-                array[3] = currentNumber;
-                return array;
+                return array.ToArray();
             }
             int[] firstIPV4 = new int[4];
             int[] secondIPV4 = new int[4];
-            firstIPV4 = TransformIntoArray(firstAddress);
-            secondIPV4 = TransformIntoArray(secondAddress);
+            firstIPV4 = GetIntArrayFromString(firstAddress);
+            secondIPV4 = GetIntArrayFromString(secondAddress);
             int difference = 0;
             int j = 0;
             for (int i = 3; i > 0; i--)
@@ -105,7 +93,7 @@ namespace ModuleOneLib
             return difference;
         }
 
-        static public int[,] Task5(int N)
+        static public int[,] ClockwiseSpiral(int N)
         {
             static void printArray(int[,] array, int biggestNumber)
             {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zR1pffBAxiRQ9RZgtOT8ulrmrY2yhuFAsRetLAAzznQ149MUn3/RSN2E7JX7bCyTmMP+72cvqSls4LsOkyoz+w==",
+  "dgSpecHash": "y8xOfmgBSDZEImkNfPdqwttIx+lL+mzJD+l4GqpB+ZxhipYfiFrwisktRSwq3DYj7MRsoxwG/xqP7wHuERDNZg==",
   "success": true,
   "projectFilePath": "D:\\LeverX курс\\Task_3\\Task_3.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\masha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "guaHnFctNZMhGNQe+YFRF4giWtsEPMfmG8/kycQWNPYg4CkRaGPyuTxDTJPKdflBMwxAFk1kYTm4qFezgiivvQ==",
+  "dgSpecHash": "5MGWQ3GDX1/T1DGFBw+bc7fQrm8CF0XgAxg25Bf7zWaInle9p70LxTE5VvEiLeEGOi0Q5kGRIpuIUFv4VUVz9w==",
   "success": true,
   "projectFilePath": "D:\\LeverX курс\\Task_4\\Task_4.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\masha\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

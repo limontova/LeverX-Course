@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Task_2
+namespace NumericalsOfString
 {
     class Program
     {
@@ -23,6 +23,7 @@ namespace Task_2
                 }
                 result += arrayOfChars[symbol];
             }
+            Console.WriteLine(result);
         }
     }
 }

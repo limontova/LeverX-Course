@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Task_3
+namespace UniqueInOrder
 {
     class Program
     {

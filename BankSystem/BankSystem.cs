@@ -47,15 +47,19 @@ namespace BankSystem
         {
             Logger.Log("Made deposit");
         }
+        public void ShowInfo()
+        {
+            Logger.Log($"{owner.Name}, {owner.Lastname}, ", );
+        }
     }
 
     public class BankAccountForVIP : IBankAccount
     {
-        public BankAccountForVIP()
+        public BankAccountForVIP() : this(new Client())
         {
             owner = new Client();
         }
-        public BankAccountForVIP(Client client)
+        public BankAccountForVIP(Client client) : this(string.Empty, str)
         {
             owner = client;
         }

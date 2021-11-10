@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace Task_1
+namespace MultiplesOfThreeOrFive
 {
     class Program
     {
