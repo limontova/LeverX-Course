@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cae383f4-5934-4699-892c-3642fac5fa62": {
+      "ProjectGuid": "cae383f4-5934-4699-892c-3642fac5fa62",
+      "DisplayName": "BankSystem.Tests",
+      "ColorIndex": 0
+    },
+    "99bcc830-baaa-492f-b604-e59b0231c05f": {
+      "ProjectGuid": "99bcc830-baaa-492f-b604-e59b0231c05f",
+      "DisplayName": "BankSystem",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
