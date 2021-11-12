@@ -6,13 +6,12 @@ namespace CardGame
 {
     public class DeckOfCards : ICloneable
     {
-        private const int _numberOfCards = 40;
+        private const int _initialNumberOfCards = 40;
         private List<Card> _cards;
-        public int NumberOfCards { get { return _numberOfCards; } }
         public DeckOfCards()
         {
-            _cards = new List<Card>(_numberOfCards);
-            for(int j = 0; j < 4; j++)
+            _cards = new List<Card>(_initialNumberOfCards);
+            for (int j = 0; j < 4; j++)
             {
                 for (int i = 0; i < 10; i++)
                 {
@@ -24,7 +23,7 @@ namespace CardGame
         public void FisherYatesShuffleAlgorithm()
         {
             Random random = new Random();
-            for(int i = _numberOfCards - 1; i >= 1; i--)
+            for(int i = _initialNumberOfCards - 1; i >= 1; i--)
             {
                 int randomPosition = random.Next(i + 1);
                 Card temp = _cards[i];
@@ -36,7 +35,7 @@ namespace CardGame
         public object Clone()
         {
             DeckOfCards clone = new DeckOfCards();
-            for(int i = 0; i < _numberOfCards; i++)
+            for(int i = 0; i < _cards.Count; i++)
             {
                 clone.Cards[i] = _cards[i];
             }

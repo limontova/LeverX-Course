@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using Moq;
 
 namespace CardGame.Tests
 {
@@ -20,7 +21,7 @@ namespace CardGame.Tests
             //Act
             game.Start();
             //Assert
-            Assert.AreEqual(expectedNumberOfCards, game.DeckOfCards.NumberOfCards);
+            Assert.AreEqual(expectedNumberOfCards, game.DrawPile.Cards.Count);
         }
 
         [Test]
@@ -35,6 +36,18 @@ namespace CardGame.Tests
             bool areEqual = initialVersionOfDecks.Cards.SequenceEqual(deckOfCards.Cards);
             //Assert
             Assert.IsFalse(areEqual);
+        }
+
+        [Test]
+        public void PlayerTriesToTakeCardFromEmptyDrawPile_ShouldShuffleDiscardPileIntoDrawPile()
+        {
+            //Arrange
+            Game game = new Game();
+            game.DrawPile.Cards.Clear();
+            //Act
+            game.OnePlayerTurn(new Player());
+            //Assert
+            Assert.AreEqual(40, game.DrawPile.Cards.Count);
         }
     }
 }

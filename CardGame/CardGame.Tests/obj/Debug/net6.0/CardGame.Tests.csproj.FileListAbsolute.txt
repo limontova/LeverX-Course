@@ -100,3 +100,5 @@ D:\LeverX курс\CardGame\CardGame.Tests\obj\Debug\net6.0\CardGame.Tests.dll
 D:\LeverX курс\CardGame\CardGame.Tests\obj\Debug\net6.0\ref\CardGame.Tests.dll
 D:\LeverX курс\CardGame\CardGame.Tests\obj\Debug\net6.0\CardGame.Tests.pdb
 D:\LeverX курс\CardGame\CardGame.Tests\obj\Debug\net6.0\CardGame.Tests.genruntimeconfig.cache
+D:\LeverX курс\CardGame\CardGame.Tests\bin\Debug\net6.0\Castle.Core.dll
+D:\LeverX курс\CardGame\CardGame.Tests\bin\Debug\net6.0\Moq.dll

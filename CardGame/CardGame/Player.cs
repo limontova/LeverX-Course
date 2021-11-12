@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardGame
 {
-    class Player
+    public class Player
     {
         private DeckOfCards _deckOfCards;
         public Player(DeckOfCards deckOfCards)
@@ -19,5 +19,9 @@ namespace CardGame
             _deckOfCards = new DeckOfCards();
         }
         public DeckOfCards DeckOfCards { set { _deckOfCards = value; } get { return _deckOfCards; } }
+        public void TakeCard(Card card)
+        {
+
+        }
     }
 }
