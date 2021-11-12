@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c62390d0-c51b-483c-9de0-ceff3089e887": {
+      "ProjectGuid": "c62390d0-c51b-483c-9de0-ceff3089e887",
+      "DisplayName": "CardGame",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -59,7 +59,7 @@ namespace BankSystem.Tests
         }
 
         //[Theory]
-        //[InlineData("Rejected for insufficient balance. Data of client: name: Vasya, lastname: Petrov, patronymic: Sergeevich, passportNumber: AB1234567", 120, _client)]
+        //[InlineData("Rejected for insufficient balance. Data of client: name: Vasya, lastname: Petrov, patronymic: Sergeevich, passportNumber: AB1234567", 120, new Client("Vasya", "Sergeevich", "Petrov", "AB1234567"))]
         //[InlineData("Approved for giving a credit. Data of client: name: Vasya, lastname: Petrov, patronymic: Sergeevich, passportNumber: AB1234567", 3000)]
         //public void IsApprovedRequestForCreditCardLog_MakeRequest_ShouldWriteValidLog(string expected, decimal cardBalance, Client client, object _client)
         //{
