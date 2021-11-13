@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace CardGame
@@ -19,11 +18,19 @@ namespace CardGame
                 }
             }
         }
-        public List<Card> Cards { get { return _cards; } }
+        public DeckOfCards(int numberOfCards)
+        {
+            _cards = new List<Card>(numberOfCards);
+            for (int i = 0; i < numberOfCards; i++)
+            {
+                _cards.Add(new Card(0));
+            }
+        }
+        public List<Card> Cards { get { return _cards; } set { _cards = value; } }
         public void FisherYatesShuffleAlgorithm()
         {
             Random random = new Random();
-            for(int i = _initialNumberOfCards - 1; i >= 1; i--)
+            for (int i = _cards.Count - 1; i >= 1; i--)
             {
                 int randomPosition = random.Next(i + 1);
                 Card temp = _cards[i];
@@ -31,11 +38,10 @@ namespace CardGame
                 _cards[randomPosition] = temp;
             }
         }
-
         public object Clone()
         {
-            DeckOfCards clone = new DeckOfCards();
-            for(int i = 0; i < _cards.Count; i++)
+            DeckOfCards clone = new DeckOfCards(_cards.Count);
+            for (int i = 0; i < _cards.Count; i++)
             {
                 clone.Cards[i] = _cards[i];
             }

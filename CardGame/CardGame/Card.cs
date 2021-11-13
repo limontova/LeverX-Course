@@ -21,5 +21,8 @@
         {
             Number = number;
         }
+        public Card()
+        {
+        }
     }
 }

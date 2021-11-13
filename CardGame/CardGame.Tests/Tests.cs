@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using System.Collections.Generic;
 using System.Linq;
-using Moq;
+using System;
 
 namespace CardGame.Tests
 {
@@ -42,12 +41,45 @@ namespace CardGame.Tests
         public void PlayerTriesToTakeCardFromEmptyDrawPile_ShouldShuffleDiscardPileIntoDrawPile()
         {
             //Arrange
-            Game game = new Game();
-            game.DrawPile.Cards.Clear();
+            Player player = new Player();
+            player.DrawPile.FisherYatesShuffleAlgorithm();
+            player.DiscardPile = (DeckOfCards)player.DrawPile.Clone();
+            player.DrawPile.Cards.Clear();
             //Act
-            game.OnePlayerTurn(new Player());
+            player.DiscardPileShuffledIntoDrawPile();
             //Assert
-            Assert.AreEqual(40, game.DrawPile.Cards.Count);
+            Assert.AreEqual(40, player.DrawPile.Cards.Count);
+        }
+
+        [Test]
+        public void ComparingTwoCards_HigherCardShouldWin()
+        {
+            //Arrange
+            Game game = new Game();
+            game.Start();
+            game._player1.DrawPile.Cards[game._player1.DrawPile.Cards.Count - 1].Number = 3;
+            game._player2.DrawPile.Cards[game._player2.DrawPile.Cards.Count - 1].Number = 1;
+            //Act
+            game.MakeTurn();
+            //Assert
+            Assert.AreEqual(game._player1.DiscardPile.Cards.Count, 2);
+        }
+
+        [Test]
+        public void ComparingTwoCardsWithSameValue_WinnerShouldGet4NetTurn()
+        {
+            //Arrange
+            Game game = new Game();
+            game.Start();
+            game._player1.DrawPile.Cards[game._player1.DrawPile.Cards.Count - 1].Number = 3;
+            game._player2.DrawPile.Cards[game._player1.DrawPile.Cards.Count - 1].Number = 3;
+            game._player1.DrawPile.Cards[game._player2.DrawPile.Cards.Count - 2].Number = 5;
+            game._player2.DrawPile.Cards[game._player1.DrawPile.Cards.Count - 2].Number = 3;
+            //Act
+            game.MakeTurn();
+            game.MakeTurn();
+            //Assert
+            Assert.AreEqual(game._player1.DiscardPile.Cards.Count, 4);
         }
     }
 }

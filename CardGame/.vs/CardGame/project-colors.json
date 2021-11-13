@@ -5,7 +5,12 @@
       "ProjectGuid": "c62390d0-c51b-483c-9de0-ceff3089e887",
       "DisplayName": "CardGame",
       "ColorIndex": 0
+    },
+    "f648bf79-d65e-4f39-b044-7582f455d86e": {
+      "ProjectGuid": "f648bf79-d65e-4f39-b044-7582f455d86e",
+      "DisplayName": "CardGame.Tests",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
