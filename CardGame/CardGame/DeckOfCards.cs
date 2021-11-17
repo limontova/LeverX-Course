@@ -3,21 +3,25 @@ using System.Collections.Generic;
 
 namespace CardGame
 {
-    public class DeckOfCards : ICloneable
+    public class DeckOfCards
     {
-        private const int _initialNumberOfCards = 40;
         private List<Card> _cards;
         public DeckOfCards()
         {
-            _cards = new List<Card>(_initialNumberOfCards);
-            for (int j = 0; j < 4; j++)
+            _cards = new List<Card>(GameConfig.initialNumberOfCards);
+            for (int j = 0; j < GameConfig.timesCardInDeck; j++)
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < GameConfig.initialNumberOfCards / GameConfig.timesCardInDeck; i++)
                 {
                     _cards.Add(new Card(i));
                 }
             }
         }
+        public DeckOfCards(List<Card> cards)
+        {
+            _cards = cards;
+        }
+        public int NumberOfCards { get { return _cards.Count; } }
         public DeckOfCards(int numberOfCards)
         {
             _cards = new List<Card>(numberOfCards);
@@ -26,7 +30,11 @@ namespace CardGame
                 _cards.Add(new Card(0));
             }
         }
-        public List<Card> Cards { get { return _cards; } set { _cards = value; } }
+        public List<Card> Cards { get { return _cards; } }
+        public void AddCard(Card card)
+        {
+            _cards.Add(card);
+        }
         public void FisherYatesShuffleAlgorithm()
         {
             Random random = new Random();
@@ -38,7 +46,7 @@ namespace CardGame
                 _cards[randomPosition] = temp;
             }
         }
-        public object Clone()
+        public DeckOfCards Clone()
         {
             DeckOfCards clone = new DeckOfCards(_cards.Count);
             for (int i = 0; i < _cards.Count; i++)

@@ -6,26 +6,21 @@ namespace CardGame
     {
         private DeckOfCards _drawPile;
         private DeckOfCards _discardPile;
-        private bool _winner;
         public Player(DeckOfCards deckOfCards)
         {
-            _drawPile = new DeckOfCards();
             _drawPile = deckOfCards;
-            _discardPile = new DeckOfCards();
-            _discardPile.Cards.Clear();
+            _discardPile = new DeckOfCards(0);
         }
         public Player()
         {
             _drawPile = new DeckOfCards();
-            _discardPile = new DeckOfCards();
-            _discardPile.Cards.Clear();
+            _discardPile = new DeckOfCards(0);
         }
         public DeckOfCards DrawPile { set { _drawPile = value; } get { return _drawPile; } }
         public DeckOfCards DiscardPile { set { _discardPile = value; } get { return _discardPile; } }
-        public bool Winner { set { _winner = value; } get { return _winner; } }
         public bool CheckLoser()
         {
-            if (_drawPile.Cards.Count == 0 && _discardPile.Cards.Count == 0)
+            if (_drawPile.NumberOfCards == 0 && _discardPile.NumberOfCards == 0)
             {
                 return true;
             }
@@ -37,9 +32,9 @@ namespace CardGame
             _drawPile = (DeckOfCards)_discardPile.Clone();
             _discardPile.Cards.Clear();
         }
-        public bool TryToTakeCard()
+        public bool CheckIfCanTakeTakeCard()
         {
-            if (_drawPile.Cards.Count != 0)
+            if (_drawPile.NumberOfCards != 0)
             {
                 return true;
             }
@@ -50,11 +45,11 @@ namespace CardGame
         }
         public Card TakeCard()
         {
-            if (!TryToTakeCard())
+            if (!CheckIfCanTakeTakeCard())
             {
                 DiscardPileShuffledIntoDrawPile();
             }
-            int indexOfLastElement = _drawPile.Cards.Count - 1;
+            int indexOfLastElement = _drawPile.NumberOfCards - 1;
             Card lastCard = _drawPile.Cards[indexOfLastElement];
             _drawPile.Cards.RemoveAt(indexOfLastElement);
             return lastCard;

@@ -29,7 +29,7 @@ namespace CardGame.Tests
             //Arrange
             DeckOfCards deckOfCards = new DeckOfCards();
             DeckOfCards initialVersionOfDecks = new DeckOfCards();
-            initialVersionOfDecks = (DeckOfCards)deckOfCards.Clone();
+            initialVersionOfDecks = deckOfCards.Clone();
             //Act
             deckOfCards.FisherYatesShuffleAlgorithm();
             bool areEqual = initialVersionOfDecks.Cards.SequenceEqual(deckOfCards.Cards);
@@ -43,7 +43,7 @@ namespace CardGame.Tests
             //Arrange
             Player player = new Player();
             player.DrawPile.FisherYatesShuffleAlgorithm();
-            player.DiscardPile = (DeckOfCards)player.DrawPile.Clone();
+            player.DiscardPile = player.DrawPile.Clone();
             player.DrawPile.Cards.Clear();
             //Act
             player.DiscardPileShuffledIntoDrawPile();
