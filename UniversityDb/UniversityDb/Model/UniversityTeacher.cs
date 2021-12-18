@@ -1,18 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversityDb
+namespace UniversityDb.Model
 {
     internal class UniversityTeacher
     {
-        public int ID { get; set; }
-        public int TeacherID { get; set; }
         public int UniversityID { get; set; }
+        public University University { get; set; }
+        public int TeacherID { get; set; }
+        public Teacher Teacher { get; set; }
         public int Wage { get; set; }
-
     }
 }

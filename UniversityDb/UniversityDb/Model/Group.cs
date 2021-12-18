@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversityDb
+namespace UniversityDb.Model
 {
     internal class Group
     {
-        public Group()
-        {
-            Name = string.Empty;
-        }
-        public int ID { get; set; }
+        public int GroupID { get; set; }
         public string Name { get; set; }
         public int UniversityID { get; set; }
+        public University University { get; set; }
+        public List<Student> Students { get; set; }
     }
 }
