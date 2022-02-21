@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace UniversityDb.Model
 {
-    internal class StudentSubject
+    public class StudentSubject
     {
+        public int Id { get; set; }
         public int StudentID { get; set; }
-        public Student Student { get; set; }
+        public Student? Student { get; set; }
         public int SubjectID { get; set; }
-        public Subject Subject { get; set; }
+        public Subject? Subject { get; set; }
         public int Mark { get; set; }
     }
 }

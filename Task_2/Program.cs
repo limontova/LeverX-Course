@@ -14,7 +14,7 @@ namespace NumericalsOfString
             foreach (var symbol in input)
             {
                 if (!arrayOfChars.ContainsKey(symbol))
-                {
+                { 
                     arrayOfChars.Add(symbol, 1);
                 }
                 else
