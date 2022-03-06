@@ -9,10 +9,10 @@ namespace UniversityDb.Model
     public class Teacher
     {
         public int TeacherID { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int Phone { get; set; }
         public int SubjectID { get; set; }
-        public Subject Subject { get; set; }
-        public List<UniversityTeacher> UniversityTeachers { get; set; } = new List<UniversityTeacher>();
+        public Subject? Subject { get; set; }
+        public UniversityTeacher? UniversityTeachers { get; set; } 
     }
 }

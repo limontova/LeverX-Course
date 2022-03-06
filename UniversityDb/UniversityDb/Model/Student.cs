@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace UniversityDb.Model
         public City? City { get; set; }
         public int? GroupID { get; set; }
         public Group? Group { get; set; }
-        public List<StudentSubject> StudentSubject { get; set; } = new List<StudentSubject>();
+        public StudentSubject? StudentSubject { get; set; }
+        //public List<StudentSubject> StudentSubject { get; set; } = new List<StudentSubject>();
     }
 }

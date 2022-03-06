@@ -1,12 +1,13 @@
 ﻿using UniversityDb;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using UniversityDb.Model;
 
 class Program
 {
     static void Main(string[] args)
     {
-        UniversityContext context = new UniversityContext(); 
+        UniversityContext context = new UniversityContext();
+        context.SaveChanges();
         context.Database.Migrate();
     }
 }

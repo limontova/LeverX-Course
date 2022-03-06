@@ -10,10 +10,10 @@ namespace UniversityDb.Model
     {
         public int Id { get; set; }
         public int UniversityID { get; set; }
-        public University Universitiy { get; set; } = new University();
+        public University? Universitiy { get; set; }
 
         public int TeacherID { get; set; }
-        public Teacher Teacher { get; set; } = new Teacher();
+        public Teacher? Teacher { get; set; }
         public int Wage { get; set; }
     }
 }
