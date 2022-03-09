@@ -5,6 +5,11 @@
       "ProjectGuid": "e18be04b-40eb-493e-ae3a-db16bc4f5b23",
       "DisplayName": "M9-LINQ",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

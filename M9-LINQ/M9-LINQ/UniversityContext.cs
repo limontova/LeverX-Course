@@ -23,9 +23,6 @@ namespace UniversityDb
             //Database.EnsureDeleted();   // удаляем бд со старой схемой
            // Database.EnsureCreated();   // создаем бд с новой схемой
         }
-        //public UniversityContext(DbContextOptions<UniversityContext> options) : base(options)
-        //{
-        //}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -44,7 +41,7 @@ namespace UniversityDb
                     new Student
                     {
                         StudentID = 1,
-                        Name = "Sasha",
+                        Name = "Dasha",
                         Birthday =  new DateTime(2000, 3, 23),
                         Bonus = 20,
                         Bursary = 1000,
@@ -94,7 +91,7 @@ namespace UniversityDb
                     new Student
                     {
                         StudentID = 6,
-                        Name = "Masha",
+                        Name = "Dasha",
                         Birthday =  new DateTime(1999, 11, 8),
                         Bonus = 30,
                         Bursary = 120,
@@ -334,167 +331,167 @@ namespace UniversityDb
                         SubjectID = 1,
                         Mark = 8,
                     },
-                     new StudentSubject
-                    {
-                       // Id = 2,
-                        StudentID = 1,
-                        SubjectID = 2,
-                        Mark = 9,
-                    },
-                       new StudentSubject
-                    {
-                        //Id = 3,
-                        StudentID = 1,
-                        SubjectID = 3,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 4,
-                        StudentID = 1,
-                        SubjectID = 4,
-                        Mark = 7,
-                    },
-                     new StudentSubject
-                    {
-                       // Id = 5,
-                        StudentID = 2,
-                        SubjectID = 1,
-                        Mark = 5,
-                    },
-                     new StudentSubject
-                    {
-                       // Id = 6,
-                        StudentID = 2,
-                        SubjectID = 2,
-                        Mark = 9,
-                    },
-                       new StudentSubject
-                    {
-                        //Id = 7,
-                        StudentID = 2,
-                        SubjectID = 3,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 8,
-                        StudentID = 2,
-                        SubjectID = 4,
-                        Mark = 6,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 9,
-                        StudentID = 3,
-                        SubjectID = 1,
-                        Mark = 7,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 10,
-                        StudentID = 3,
-                        SubjectID = 2,
-                        Mark = 7,
-                    },
-                       new StudentSubject
-                    {
-                        //Id = 11,
-                        StudentID = 3,
-                        SubjectID = 3,
-                        Mark = 7,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 12,
-                        StudentID = 3,
-                        SubjectID = 4,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 13,
-                        StudentID = 4,
-                        SubjectID = 1,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 14,
-                        StudentID = 4,
-                        SubjectID = 2,
-                        Mark = 7,
-                    },
-                       new StudentSubject
-                    {
-                        //Id = 15,
-                        StudentID = 4,
-                        SubjectID = 3,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 16,
-                        StudentID = 4,
-                        SubjectID = 4,
-                        Mark = 10,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 17,
-                        StudentID = 5,
-                        SubjectID = 1,
-                        Mark = 8,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 18,
-                        StudentID = 5,
-                        SubjectID = 2,
-                        Mark = 8,
-                    },
-                       new StudentSubject
-                    {
-                        //Id = 19,
-                        StudentID = 5,
-                        SubjectID = 3,
-                        Mark = 8,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 20,
-                        StudentID = 5,
-                        SubjectID = 4,
-                        Mark = 8,
-                    },
-                     new StudentSubject
-                    {
-                        //Id = 21,
-                        StudentID = 6,
-                        SubjectID = 1,
-                        Mark = 9,
-                    },
-                     new StudentSubject
-                    {
-                       // Id = 22,
-                        StudentID = 6,
-                        SubjectID = 2,
-                        Mark = 3,
-                    },
-                       new StudentSubject
-                    {
-                       // Id = 23,
-                        StudentID = 6,
-                        SubjectID = 3,
-                        Mark = 4,
-                    },
-                     new StudentSubject
-                    {
-                       // Id = 24,
-                        StudentID = 6,
-                        SubjectID = 4,
-                        Mark = 7,
-                    },
+                    // new StudentSubject
+                    //{
+                    //   // Id = 2,
+                    //    StudentID = 1,
+                    //    SubjectID = 2,
+                    //    Mark = 9,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //    //Id = 3,
+                    //    StudentID = 1,
+                    //    SubjectID = 3,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 4,
+                    //    StudentID = 1,
+                    //    SubjectID = 4,
+                    //    Mark = 7,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //   // Id = 5,
+                    //    StudentID = 2,
+                    //    SubjectID = 1,
+                    //    Mark = 5,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //   // Id = 6,
+                    //    StudentID = 2,
+                    //    SubjectID = 2,
+                    //    Mark = 9,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //    //Id = 7,
+                    //    StudentID = 2,
+                    //    SubjectID = 3,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 8,
+                    //    StudentID = 2,
+                    //    SubjectID = 4,
+                    //    Mark = 6,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 9,
+                    //    StudentID = 3,
+                    //    SubjectID = 1,
+                    //    Mark = 7,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 10,
+                    //    StudentID = 3,
+                    //    SubjectID = 2,
+                    //    Mark = 7,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //    //Id = 11,
+                    //    StudentID = 3,
+                    //    SubjectID = 3,
+                    //    Mark = 7,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 12,
+                    //    StudentID = 3,
+                    //    SubjectID = 4,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 13,
+                    //    StudentID = 4,
+                    //    SubjectID = 1,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 14,
+                    //    StudentID = 4,
+                    //    SubjectID = 2,
+                    //    Mark = 7,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //    //Id = 15,
+                    //    StudentID = 4,
+                    //    SubjectID = 3,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 16,
+                    //    StudentID = 4,
+                    //    SubjectID = 4,
+                    //    Mark = 10,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 17,
+                    //    StudentID = 5,
+                    //    SubjectID = 1,
+                    //    Mark = 8,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 18,
+                    //    StudentID = 5,
+                    //    SubjectID = 2,
+                    //    Mark = 8,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //    //Id = 19,
+                    //    StudentID = 5,
+                    //    SubjectID = 3,
+                    //    Mark = 8,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 20,
+                    //    StudentID = 5,
+                    //    SubjectID = 4,
+                    //    Mark = 8,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //    //Id = 21,
+                    //    StudentID = 6,
+                    //    SubjectID = 1,
+                    //    Mark = 9,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //   // Id = 22,
+                    //    StudentID = 6,
+                    //    SubjectID = 2,
+                    //    Mark = 3,
+                    //},
+                    //   new StudentSubject
+                    //{
+                    //   // Id = 23,
+                    //    StudentID = 6,
+                    //    SubjectID = 3,
+                    //    Mark = 4,
+                    //},
+                    // new StudentSubject
+                    //{
+                    //   // Id = 24,
+                    //    StudentID = 6,
+                    //    SubjectID = 4,
+                    //    Mark = 7,
+                    //},
             }
             );
             modelBuilder.Entity<Teacher>().HasData(

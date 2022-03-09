@@ -10,6 +10,7 @@ namespace UniversityDb.Model
 {
     public class Student
     {
+        [Key]
         public int StudentID { get; set; }
         public string? Name { get; set; }
         public DateTime Birthday { get; set; }

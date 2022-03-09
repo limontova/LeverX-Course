@@ -9,17 +9,17 @@ using UniversityDb;
 
 #nullable disable
 
-namespace UniversityDb.Migrations
+namespace M9_LINQ.Migrations
 {
     [DbContext(typeof(UniversityContext))]
-    [Migration("20220306185856_init")]
-    partial class init
+    [Migration("20220309120802_Uni")]
+    partial class Uni
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -159,7 +159,7 @@ namespace UniversityDb.Migrations
                             Bursary = 1000,
                             CityID = 1,
                             GroupID = 1,
-                            Name = "Sasha"
+                            Name = "Dasha"
                         },
                         new
                         {
@@ -209,7 +209,7 @@ namespace UniversityDb.Migrations
                             Bursary = 120,
                             CityID = 1,
                             GroupID = 3,
-                            Name = "Masha"
+                            Name = "Dasha"
                         },
                         new
                         {
@@ -321,9 +321,6 @@ namespace UniversityDb.Migrations
                     b.Property<int>("SubjectID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
                     b.Property<int>("Mark")
                         .HasColumnType("int");
 
@@ -342,29 +339,7 @@ namespace UniversityDb.Migrations
                         {
                             StudentID = 1,
                             SubjectID = 1,
-                            Id = 1,
                             Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 2,
-                            SubjectID = 2,
-                            Id = 6,
-                            Mark = 9
-                        },
-                        new
-                        {
-                            StudentID = 3,
-                            SubjectID = 3,
-                            Id = 11,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 4,
-                            SubjectID = 4,
-                            Id = 16,
-                            Mark = 10
                         });
                 });
 

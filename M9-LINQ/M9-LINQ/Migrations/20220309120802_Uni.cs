@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace UniversityDb.Migrations
+namespace M9_LINQ.Migrations
 {
-    public partial class init : Migration
+    public partial class Uni : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -160,7 +160,6 @@ namespace UniversityDb.Migrations
                 {
                     StudentID = table.Column<int>(type: "int", nullable: false),
                     SubjectID = table.Column<int>(type: "int", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false),
                     Mark = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -253,12 +252,12 @@ namespace UniversityDb.Migrations
                 columns: new[] { "StudentID", "Birthday", "Bonus", "Bursary", "CityID", "GroupID", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2000, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1000, 1, 1, "Sasha" },
+                    { 1, new DateTime(2000, 3, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1000, 1, 1, "Dasha" },
                     { 2, new DateTime(2000, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), 30, 120, 1, 1, "Masha" },
                     { 3, new DateTime(2000, 7, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1200, 1, 1, "Misha" },
                     { 4, new DateTime(2001, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), 15, 500, 1, 2, "Oksana" },
                     { 5, new DateTime(2000, 11, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1000, 1, 3, "Sasha" },
-                    { 6, new DateTime(1999, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 30, 120, 1, 3, "Masha" },
+                    { 6, new DateTime(1999, 11, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 30, 120, 1, 3, "Dasha" },
                     { 7, new DateTime(1998, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1200, 1, 6, "Misha" },
                     { 8, new DateTime(1999, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 15, 500, 1, 6, "Olga" },
                     { 9, new DateTime(2000, 11, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 20, 1000, 1, 2, "Sasha" },
@@ -273,14 +272,8 @@ namespace UniversityDb.Migrations
 
             migrationBuilder.InsertData(
                 table: "StudentSubject",
-                columns: new[] { "StudentID", "SubjectID", "Id", "Mark" },
-                values: new object[,]
-                {
-                    { 1, 1, 1, 8 },
-                    { 2, 2, 6, 9 },
-                    { 3, 3, 11, 7 },
-                    { 4, 4, 16, 10 }
-                });
+                columns: new[] { "StudentID", "SubjectID", "Mark" },
+                values: new object[] { 1, 1, 8 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Group_UniversityID",

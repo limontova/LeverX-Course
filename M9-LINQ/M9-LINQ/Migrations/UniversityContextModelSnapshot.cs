@@ -8,7 +8,7 @@ using UniversityDb;
 
 #nullable disable
 
-namespace UniversityDb.Migrations
+namespace M9_LINQ.Migrations
 {
     [DbContext(typeof(UniversityContext))]
     partial class UniversityContextModelSnapshot : ModelSnapshot
@@ -17,7 +17,7 @@ namespace UniversityDb.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -157,7 +157,7 @@ namespace UniversityDb.Migrations
                             Bursary = 1000,
                             CityID = 1,
                             GroupID = 1,
-                            Name = "Sasha"
+                            Name = "Dasha"
                         },
                         new
                         {
@@ -207,7 +207,7 @@ namespace UniversityDb.Migrations
                             Bursary = 120,
                             CityID = 1,
                             GroupID = 3,
-                            Name = "Masha"
+                            Name = "Dasha"
                         },
                         new
                         {
@@ -338,144 +338,6 @@ namespace UniversityDb.Migrations
                             StudentID = 1,
                             SubjectID = 1,
                             Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 1,
-                            SubjectID = 2,
-                            Mark = 9
-                        },
-                        new
-                        {
-                            StudentID = 1,
-                            SubjectID = 3,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 1,
-                            SubjectID = 4,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 2,
-                            SubjectID = 1,
-                            Mark = 5
-                        },
-                        new
-                        {
-                            StudentID = 2,
-                            SubjectID = 2,
-                            Mark = 9
-                        },
-                        new
-                        {
-                            StudentID = 2,
-                            SubjectID = 3,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 2,
-                            SubjectID = 4,
-                            Mark = 6
-                        },
-                        new
-                        {
-                            StudentID = 3,
-                            SubjectID = 1,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 3,
-                            SubjectID = 2,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 3,
-                            SubjectID = 3,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 3,
-                            SubjectID = 4,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 4,
-                            SubjectID = 1,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 4,
-                            SubjectID = 2,
-                            Mark = 7
-                        },
-                        new
-                        {
-                            StudentID = 4,
-                            SubjectID = 3,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 4,
-                            SubjectID = 4,
-                            Mark = 10
-                        },
-                        new
-                        {
-                            StudentID = 5,
-                            SubjectID = 1,
-                            Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 5,
-                            SubjectID = 2,
-                            Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 5,
-                            SubjectID = 3,
-                            Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 5,
-                            SubjectID = 4,
-                            Mark = 8
-                        },
-                        new
-                        {
-                            StudentID = 6,
-                            SubjectID = 1,
-                            Mark = 9
-                        },
-                        new
-                        {
-                            StudentID = 6,
-                            SubjectID = 2,
-                            Mark = 3
-                        },
-                        new
-                        {
-                            StudentID = 6,
-                            SubjectID = 3,
-                            Mark = 4
-                        },
-                        new
-                        {
-                            StudentID = 6,
-                            SubjectID = 4,
-                            Mark = 7
                         });
                 });
 
