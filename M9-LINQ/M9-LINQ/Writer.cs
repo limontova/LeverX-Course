@@ -23,7 +23,25 @@ namespace M9_LINQ
             Console.WriteLine(task);
             foreach (var item in output)
             {
-                Console.WriteLine($"{item} {oneMoreStringInTable} {100 * item.Bursary / maxBursary}");
+                Console.WriteLine($"{item} {oneMoreStringInTable} {100 * item.Bursary / maxBursary} %");
+            }
+            Console.WriteLine("-------------------------------------------------------------------------");
+        }
+        public void Write(IQueryable<dynamic> output, string task)
+        {
+            Console.WriteLine(task);
+            foreach (var item in output)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("-------------------------------------------------------------------------");
+        }
+        public void Write(IQueryable<dynamic> output, string task, string oneMoreStringInTable, int maxBursary)
+        {
+            Console.WriteLine(task);
+            foreach (var item in output)
+            {
+                Console.WriteLine($"{item} {oneMoreStringInTable} {100 * item.bursary / maxBursary} %");
             }
             Console.WriteLine("-------------------------------------------------------------------------");
         }
