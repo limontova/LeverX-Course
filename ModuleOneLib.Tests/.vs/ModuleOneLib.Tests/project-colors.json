@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "dfa55b9d-1ea5-4979-88dd-6d698ff8bcaf": {
+      "ProjectGuid": "dfa55b9d-1ea5-4979-88dd-6d698ff8bcaf",
+      "DisplayName": "ModuleOneLib.Tests",
+      "ColorIndex": 0
+    },
+    "12d23310-ec66-4320-91a9-f8ddcdb36d56": {
+      "ProjectGuid": "12d23310-ec66-4320-91a9-f8ddcdb36d56",
+      "DisplayName": "ModuleOneLib",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
