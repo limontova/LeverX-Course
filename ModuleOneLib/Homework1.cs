@@ -44,27 +44,14 @@ namespace ModuleOneLib
         static public List<T> UniqueInOrder<T>(IEnumerable<T> sequence) where T : IEquatable<T>
         {
             var result = new List<T>();
-            //sequence.GetEnumerator().Reset();
-            //IEnumerator<T> iterator = sequence.GetEnumerator();
-            //iterator.MoveNext();
-            //T previousSymbol = iterator.Current;
             T previousSymbol = default(T);
-            bool was = false;
             foreach (var element in sequence)
             {
-                if (was)
+                if (!element.Equals(previousSymbol))
                 {
-                    if (!previousSymbol.Equals(element))
-                    {
-                        result.Add(element);
-                        previousSymbol = element;
-                    }
-                }
-                else
-                {
-                    was = true;
                     result.Add(element);
                 }
+                previousSymbol = element;
             }
             return result;
         }
