@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 5.0.x
     - name: Build
       working-directory: ./ModuleOneLib
-      run: dotnet build --no-restore
+      run: dotnet build
     - name: Test
       working-directory: ./ModuleOneLib.Tests
       run: dotnet test 
